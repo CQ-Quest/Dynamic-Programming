@@ -1,2 +1,2 @@
 # Dynamic-Programming
-![Image text](12.jpg)
+![Image text](https://github.com/CQ-Quest/Dynamic-Programming/12.jpg)
