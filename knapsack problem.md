@@ -35,7 +35,30 @@
      for(j=m;j>=1;j--)   //从后往前推
      if(j>=w[i])  dp[j]=max(dp[j],dp[j-w[i]]+c[i]);     
      
-   Code:  
+	   Code:  
+		const int maxn=4000;
+		int dp[maxn][maxn];
+		int w[maxn],c[maxn];
+		int main() {
+			int N,V;
+		    cin>>N>>V;
+		    for(int i=1;i<=N;i++){
+			cin>>w[i]>>c[i];
+		    }
+		    for(int i = 1;i<=N;i++)
+				for(int j = 0;j<=V;j++){ 
+					if(j>=w[i]){
+				dp[i][j] = max(dp[i-1][j],dp[i-1][j-w[i]]+c[i]);
+			    }
+					else
+						dp[i][j] = dp[i-1][j];
+			} 
+		    cout<<dp[N][V]<<endl;
+		    return 0;
+		}
+		
+     一维优化：
+     
         
                      
 (2)完全背包  
