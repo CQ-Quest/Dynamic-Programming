@@ -57,8 +57,20 @@
 		    return 0;
 		}
 		
-     一维优化：
-     
+         一维优化：
+	const int maxn=3000;
+	int dp[maxn],w[maxn],c[200];
+	int main(){
+		int N,V;
+		cin>>N>>V;
+		for(int i=1;i<=N;i++)
+		cin>>w[i]>>c[i];
+		for(int i=1;i<=N;i++)
+		for(int j=V;j>=1;j--)
+		if(j>=w[i]) dp[j]=max(dp[j],dp[j-w[i]]+c[i]);
+		cout<<dp[N]<<endl;
+		return 0; 
+	}
         
                      
 (2)完全背包  
