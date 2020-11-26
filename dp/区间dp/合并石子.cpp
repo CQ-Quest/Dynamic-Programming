@@ -1,5 +1,3 @@
- # 例题 合并石子
-  
       #include<bits/stdc++.h>
       #define INF 0x3f3f3f3f
       using namespace std;
